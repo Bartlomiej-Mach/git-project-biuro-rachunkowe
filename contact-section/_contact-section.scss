@@ -1,0 +1,262 @@
+.contact-section {
+    width: 100%;
+    position: relative;
+    @include center-top-column();
+    overflow: hidden;
+    @include bigscreen {
+        width: 1920px;
+    }
+    .section-description {
+        color: $t_color;
+        font-family: $s-font;
+        font-size: 12px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-top: 100px;
+    }
+    .section-name {
+        color: black;
+        font-family: $p-font;
+        margin-top: 18px;
+    }
+    .contact-wrapper {
+        width: 80%;
+        background: $s_color;
+        position: relative;
+        @include center-column();
+        z-index: 1;
+        margin: 160px 0;
+        padding: 130px 0px;
+        -webkit-box-shadow: 0px 0px 70px 11px rgba(0,0,0,0.35);
+        -moz-box-shadow: 0px 0px 70px 11px rgba(0,0,0,0.35);
+        box-shadow: 0px 0px 70px 11px rgba(0,0,0,0.35);
+        @include smaller-than-1920() {
+            width: 60%;
+        }
+        @include smaller-than-1480() {
+            width: 80%;
+        }
+        @include phone() {
+            width: 90%;
+        }
+        @include verysmall {
+           width: 100%;
+        }
+        .wrapper-name {
+            position: absolute;
+            top: -26px;
+            right: -40px;
+            font-family: $p-font;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 50px;
+            @include smaller-than-880 {
+                font-size: 40px;
+                top: -20px;
+            }
+            @include tabPort() {
+                right: 50%;
+                transform: translateX(50%);
+            }
+            @include verysmall {
+                font-size: 30px;
+                top: -10px;
+            } 
+        }
+        .col-wrapper {
+            width: 100%;
+            display: flex;
+            margin-bottom: 100px;
+            @include smaller-than-880() {
+                @include center-column();
+            }
+            .col-01 {
+                width: 50%;
+                display: flex;
+                @include center();
+                @include smaller-than-880() {
+                    margin-bottom: 50px;
+                    width: 100%;
+                }
+                .col-01-left {
+                    
+                    width: 50%;
+                    padding: 20px 10px 0 0;
+                    @include smaller-than-880() {
+                        width: 100%;
+                    }
+                    .col-01-left--item {
+                        font-family: $p-font;
+                        font-weight: normal;
+                        font-size: 20px;
+                        margin: 0 0 10px 0;
+                        text-align: right;
+                        color: black;
+                        @include smaller-than-550 {
+                            font-size: 15px;
+                        }
+                    }
+                    
+                }
+                .col-01-right {
+                    width: 50%;
+                    padding: 20px 0 0 10px;
+                    border-left: 1px solid black;
+                    @include smaller-than-880() {
+                        width: 100%;
+                    }
+                    .col-01-right--item {
+                        font-family: $p-font;
+                        font-weight: normal;
+                        font-size: 20px;
+                        margin: 0 0 10px 0;
+                        text-align: left;
+                        color: black;
+                        @include smaller-than-550 {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .col-02 {
+                width: 50%;
+                @include center();
+                
+                .icon-wrapper {
+                    width: 250px;
+                    height: 130px;
+                    @include center();
+                    background: $t_color;
+                    position: relative;
+                    .far {
+                        font-size: 100px;
+                        animation: spin 25s ease-in-out infinite;
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        background: $p_color;
+                        left: 0;
+                        top: 0;
+                        width: 130px;
+                        height: 100px;
+                        z-index: -1;
+                        transform: translate(-10px, -10px);
+                    }
+                }
+                
+            }
+        }
+        .contact-info-wrapper {
+            width: 100%;
+            @include center();
+            position: relative;
+            overflow: hidden;
+            @include phone() {
+                height: 300px;
+            }
+            &::before {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                content: '';
+                background: black;
+                opacity: .8;
+                z-index: -1;
+            }
+            .contact-info-name {
+                position: absolute;
+                transform: translateY(-100px);
+                font-family: $p-font;
+                font-size: 40px;
+                font-weight: bold;
+                text-align: center;
+                text-transform: uppercase;
+                @include smaller-than-880 {
+                    font-size: 30px;
+                    top: -20px;
+                    transform: translateY(50px);
+                }
+                
+                
+            }
+            .contact-info-img {
+                width: 100%;
+                position: relative;
+                z-index: -2;
+                @include center();
+                @include phone() {
+                    height: 300px;
+                    width: 200%;
+                }
+            }
+            .contact-info-content {
+                margin-top: 60px;
+                width: 100%;
+                position: absolute;
+                overflow: hidden;
+                .row {
+                    
+                    @include center-left();
+                    
+                    margin: 20px 100px;
+                    @include smaller-than-880() {
+                        margin: 20px 50px;
+                    }
+                    @include smaller-than-425 {
+                        margin: 20px 30px;
+                    }
+                    .fas {
+                        font-size: 40px;
+                        @include smaller-than-550 {
+                            font-size: 30px;
+                        }
+                        @include verysmall {
+                            font-size: 25px;
+                         
+                        }
+                    }
+                    .email-name {
+                        font-family: $s-font;
+                        margin-left: 30px;
+                        transition: 0.2s;
+                        &:hover {
+                            color: $t_color;
+                        }
+                        @include smaller-than-550 {
+                            font-size: 15px;
+                            margin-left: 15px;
+                        }
+                        @include smaller-than-425 {
+                            font-size: 13px;
+                        }
+                    }
+                    .tel-number {
+                        color: white;
+                        font-family: $s-font;
+                        margin-left: 30px;
+                        transition: 0.2s;
+                        @include smaller-than-550 {
+                            font-size: 15px;
+                            margin-left: 15px;
+                        }
+                        @include smaller-than-425 {
+                            font-size: 13px;
+                        }
+                        &:hover {
+                            color: $t_color;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}

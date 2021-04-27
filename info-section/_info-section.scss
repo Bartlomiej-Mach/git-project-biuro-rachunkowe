@@ -1,0 +1,90 @@
+.info-section {
+    width: 100%;
+    position: relative;
+    @include center-top-column();
+    overflow: hidden;
+    @include bigscreen {
+        width: 1920px;
+    }
+    .section-description {
+        color: $t_color;
+        font-family: $s-font;
+        font-size: 12px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-top: 100px;
+    }
+    .section-name {
+        color: black;
+        font-family: $p-font;
+        margin-top: 18px;
+    }
+    .info-wrapper {
+        width: 80%;
+        background: $s_color;
+        position: relative;
+        @include center-right();
+        margin: 160px 0;
+        padding: 130px 75px;
+        -webkit-box-shadow: 0px 0px 70px 11px rgba(0,0,0,0.35);
+        -moz-box-shadow: 0px 0px 70px 11px rgba(0,0,0,0.35);
+        box-shadow: 0px 0px 70px 11px rgba(0,0,0,0.35);
+        @include smaller-than-1920() {
+            width: 60%;
+        }
+        @include smaller-than-1480() {
+            width: 80%;
+        }
+        @include smaller-than-880() {
+            padding: 130px 40px;
+        }
+        @include phone() {
+            width: 90%;
+        }
+        @include verysmall {
+            width: 100%;
+         }
+        .wrapper-name {
+            position: absolute;
+            top: -26px;
+            right: -40px;
+            font-family: $p-font;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 50px;
+            @include smaller-than-880 {
+                font-size: 40px;
+                top: -20px;
+            }
+            @include tabPort() {
+                right: 50%;
+                transform: translateX(50%);
+            }
+            @include verysmall {
+                font-size: 30px;
+                top: -10px;
+            }
+            
+            
+        }
+        .wrapper-img {
+            width: 30%;
+            position: absolute;
+            left: 75px;
+            @include smaller-than-880 {
+                display: none;
+            }
+        }
+        .wrapper-content {
+            width: 50%;
+            font-family: $p-font;
+            text-align: right;
+            color: black;
+            font-size: 18px;
+            @include smaller-than-880 {
+                width: 100%;
+                text-align: left;
+            }
+        }   
+    }
+}

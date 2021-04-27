@@ -1,0 +1,62 @@
+.footer-section {
+    width: 100%;
+    padding: 50px 0 30px 0;
+    background: $p_color;
+    position: relative;
+    @include center-column();
+    &--back-btn {
+        width: 60px;
+        height: 60px;
+        background: $s_color;
+        position: absolute;
+        top: -20px;
+        @include center();
+        @include smaller-than-550 {
+            width: 45px;
+            height: 45px;
+        }
+        .rotate-square {
+            width: 50%;
+            height: 50%;
+            border-top: 3px solid black;
+            border-left: 3px solid black;
+            transform: translateY(10px) rotate(45deg);
+            transition: 0.2s;
+            @include smaller-than-550 {
+                border-top: 2px solid black;
+                border-left: 2px solid black;
+                transform: translateY(5px) rotate(45deg);
+            }
+        }
+        &:hover .rotate-square {
+            transform: translateY(0px) rotate(45deg);
+        }
+    }
+    &--logo {
+        margin-top: 50px;
+        @include smaller-than-550 {
+            transform: scale(0.8);
+        }
+    }
+    &--email {
+        font-family: $p-font;
+        margin-top: 30px;
+        transition: 0.2s;
+        @include smaller-than-550 {
+            font-size: 13px;
+        }
+        &:hover {
+            color: $t_color;
+        }
+    }
+    &--policy {
+        font-family: $p-font;
+        margin-top: 30px;
+        transition: 0.2s;
+        font-size: 15px;
+        color: black;
+        @include smaller-than-550 {
+            font-size: 13px;
+        }
+    }
+}
